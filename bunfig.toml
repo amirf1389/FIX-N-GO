@@ -1,0 +1,3 @@
+[test]
+# Only run the real tests (not copies inside dist/BracketEngine/source)
+root = "./tests"
