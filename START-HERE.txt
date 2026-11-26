@@ -1,0 +1,55 @@
+🏆 BRACKET ENGINE — ALL IN ONE
+==============================
+
+HOW TO START (pick your computer)
+
+  Windows ...... double-click  Start-Windows.bat
+  Mac .......... double-click  Start-Mac.command
+                 (first time: right-click it → Open → Open, because it isn't from the App Store)
+  Linux ........ run           ./Start-Linux.sh
+
+Your browser opens the bracket at http://localhost:3000.
+Keep the black window open while you use it. Close the window to stop.
+
+If Windows shows "Windows protected your PC": click "More info", then "Run anyway".
+
+
+WHAT'S IN THIS FOLDER
+
+  Start-Windows.bat / Start-Mac.command / Start-Linux.sh
+                 One-click launchers. They use the ready-made app for your
+                 computer, or Node.js if the app can't run.
+
+  app/           Ready-to-run apps (no install needed):
+                   BracketEngine-windows-x64.exe
+                   BracketEngine-macos-arm64     (Apple Silicon M1/M2/M3/M4)
+                   BracketEngine-macos-x64       (older Intel Macs)
+                   BracketEngine-linux-x64
+
+  node/          Plain JavaScript version for Node.js 18+.
+                   cd node → npm install → npm start
+
+  source/        The full source code (TypeScript, React UI, tests).
+                   cd source → node install.mjs        (set up + run tests)
+                               node install.mjs start  (run from source)
+                               node install.mjs build  (rebuild everything)
+
+  data/          Your tournaments (bracket.sqlite). Created on first start.
+                 The apps, the Node version and the source all share this
+                 one database, so your tournaments are the same whichever
+                 way you start the engine. Back this folder up to keep your data.
+
+
+FEATURES
+
+  • 6-team hybrid playoff with twice-to-beat quarter-finals
+  • Enter scores; the bracket fills itself in automatically
+  • Simulate (favourites / upsets / random), reset a match or everything
+  • 🔮 Prediction mode: title odds for every team, win chances for every
+    match, and what-if picks (never saved)
+
+
+ADVANCED
+
+  Different port:   set PORT before starting (e.g. PORT=4000)
+  REST API docs:    source/README.md
